@@ -2,40 +2,426 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Love Letter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'><link rel="stylesheet" href="./style.css">
-
+  <title>Brian &hearts; Valencia</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="container">
-	<label>
-	<div class="heart">
-		<img class="love" width="20%" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg"></img>
-	</div>
-	<input id="messageState" type="checkbox" style="display:none"/>
-	</label>
-	<div class="pesan">
-	<div class="message">
-		
-		<h1>Hi <b>Gab</b>,</h1>
-		<p>Gimana aktivitas hari ini ?
-			Cape? Bahagia? Biasa aja ? pasti biasa aja , tapi i harap si bahagia trus :v . I kangen tauu setiap kali nungguin u main game dari malem sampai pagi >_< . Tapi gapapa si karena emang mesti bisa isi waktu luang.
-			<br>
-			Kapan kapan pas ketemu kita spend time bareng ya. Nonton bioskop, ke taman, makan, apapun yang seru dan yang u mau. Meskipun gaada yang tau apakah kita emang bisa sampai ke tahap itu, Maaf yah suka gangguin u terus :) . I harap U ga illfeel, Kalo lagi sedih cerita yah, i pasti seneng bisa dgr banyak kata kata dari u.<br>
-			yang penting sih jangan kata kata kasar , atau ngatain 🤣. Oh ya Btw , kasih tau dongg alamat nyaa pelit bangett siiii cantik nii. Padahal cuma pengen pesenin jajanan, sumpah suerrr ✌️ ga macem macem wkwkwk. Udah deh gitu aja ehe moga nanti u bisa jatuh hati sama i yahh, juga nanti moga i bisa terus terusan semangat gini dptin u. Thx Gab udah selalu kasih respon yang terbaik buat i, meskipun kdg i masih mikir aneh aneh / macem macem. 
-			<b><h2>
-			I WOULD SAY I LOVE U BABE <3 </h2> </b><br>
-		</p>
+<style>
+ body{
+  font-family: 'Dancing Script', cursive;
+ }
+.containerx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  height: 100vh;
+  width: 100vw;
+  animation: lift 0.8s ease-in-out;
+  animation-delay: 1.0s;
+  animation-fill-mode: forwards;
+  z-index: 999;
+  position: fixed;
+  background-color: rgb(17, 17, 17);
+}
 
 
-		</div>
-	</div>
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes wave {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  90% {
+    transform: translate3d(0, -16%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -32%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes lift {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+@keyframes datang {
+  0% {
+    transform: translate3d(0, -100%, 0);
+    
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+#snow {
+	background: none;
+	font-family: Androgyne;
+	background-image: url('https://3.bp.blogspot.com/-lLYG_aPYaWI/V0MfvZui2cI/AAAAAAAAV9Q/ivLLay21G6IKLLGEI-bHgpzmPRHFubhwgCLcB/s1600/s2.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:1;
+	-webkit-animation: snow 12s linear infinite;
+	-moz-animation: snow 12s linear infinite;
+	-ms-animation: snow 12s linear infinite;
+	animation: snow 12s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}	
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  /* for touch screen */
+  touch-action: none; 
+}
+
+body {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #111;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+#drag-container, #spin-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-10deg);
+          transform: rotateX(-10deg);
+}
+
+#drag-container img, #drag-container video {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  font-size: 50px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 8px #fff;
+          box-shadow: 0 0 8px #fff;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+}
+
+#drag-container img:hover, #drag-container video:hover {
+  -webkit-box-shadow: 0 0 15px #fffd;
+          box-shadow: 0 0 15px #fffd;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+}
+
+#drag-container p {
+  font-family: Serif;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+          transform: translate(-50%,-50%) rotateX(90deg);
+  color: #fff;
+}
+
+#ground {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+          transform: translate(-50%,-50%) rotateX(90deg);
+  background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
+}
+
+.music-player {
+  width: 75px;
+  height: 50px;
+  position: relative;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.music-player.music-player--disabled {
+  opacity: 0.26;
+}
+.music-player__wrapper {
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+}
+.music-player__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 1;
+  width: 100%;
+  border: 0;
+}
+.music-player__play {
+  background: transparent;
+  display: none;
+}
+.music-player--disabled .music-player__play {
+  display: block;
+}
+.music-player--disabled .music-player__pause {
+  display: none;
+}
+.music-player__bar {
+  background: #fff;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  animation-name: music-bar-anim;
+  animation-iteration-count: infinite;
+}
+.music-player--disabled .music-player__bar {
+  animation-play-state: paused;
+}
+.music-player__bar1 {
+  animation-duration: 1.3s;
+  left: 0;
+}
+.music-player__bar2 {
+  animation-duration: 1.8s;
+  left: 15px;
+}
+.music-player__bar3 {
+  animation-duration: 2.2s;
+  left: 30px;
+}
+.music-player__bar4 {
+  animation-duration: 2s;
+  left: 45px;
+}
+.music-player__bar5 {
+  animation-duration: 1.5s;
+  left: 75px;
+}
+@keyframes music-bar-anim {
+  0% {
+    height: 10px;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 10px;
+  }
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+}
+</style>
+<body><div class="music-player__wrapper">
+
+  <div class="music-player" id="music-container">
+    <audio id="audio-player" autoplay loop>
+      <source src="https://webinvite.id/wp-content/uploads/2022/10/Justin-Bieber-Anyone-Lyrics.mp3" type="audio/mpeg">
+      <p class="sr-only">Your browser does not support the audio element.</p>
+    </audio>
+
+    <div class="music-player__bar music-player__bar1"></div>
+    <div class="music-player__bar music-player__bar2"></div>
+    <div class="music-player__bar music-player__bar3"></div>
+    <div class="music-player__bar music-player__bar4"></div>
+
+    <button onclick="playMusic()" class="music-player__button music-player__play">
+      <span class="sr-only">Play</span>
+    </button>
+    <button onclick="pauseMusic()" class="music-player__button music-player__pause">
+      <span class="sr-only">Pause</span>
+    </button>
+  </div>
+
 </div>
-<!-- partial -->
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js'></script><script  src="./script.js"></script>
+  <div class="containerx">
+    <h1 style=" text-align:center;color: white; font-size: 50px;">Happy Wedding to : <br> <br> Brian &hearts; Valencia</h1><br>
+
+  </div>
+<!-- partial:index.partial.html -->
+<div id="drag-container">
+  <div id="spin-container">
+    <!-- Add your images (or video) here -->
+    <img src="https://webinvite.id/wp-content/uploads/2022/10/Brian-Valencia-1.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://webinvite.id/wp-content/uploads/2022/10/Brian-Valencia-2.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://webinvite.id/wp-content/uploads/2022/10/Brian-Valencia-3.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://webinvite.id/wp-content/uploads/2022/10/Brian-Valencia-4.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://webinvite.id/wp-content/uploads/2022/10/Brian-Valencia-5.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://webinvite.id/wp-content/uploads/2022/10/Brian-Valencia-6.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://webinvite.id/wp-content/uploads/2022/10/Brian-Valencia-7.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <!-- Example image with link -->
+    <!-- Example add video  -->
+    <div id="audio-container" class="audio-box">			
+
+			<script>
+        var settingAutoplay = 'yes';
+        window.settingAutoplay = settingAutoplay === 'disable' ? false : true;
+      </script>
+  
+      <div id="audio-container" class="audio-box">			
+  
+        <audio id="song" loop>
+          <source src="https://webinvite.id/wp-content/uploads/2022/10/Justin-Bieber-Anyone-Lyrics.mp3"
+                  type="audio/mp3">
+        </audio>  
+  
+        <div class="elementor-icon-wrapper" id="unmute-sound" style="display: none;">
+          <div class="elementor-icon">
+          <i aria-hidden="true" class="fas fa-compact-disc"></i>				</div>
+        </div> 
+  
+        <div class="elementor-icon-wrapper" id="mute-sound" style="display: none;">
+          <div class="elementor-icon">
+          <i aria-hidden="true" class="fas fa-pause"></i>				</div>
+        </div>
+        
+      </div>
+
+			<div class="elementor-icon-wrapper" id="unmute-sound" style="display: none;">
+				<div class="elementor-icon">
+				<i aria-hidden="true" class="fas fa-compact-disc"></i>				</div>
+			</div> 
+
+			<div class="elementor-icon-wrapper" id="mute-sound" style="display: none;">
+				<div class="elementor-icon">
+				<i aria-hidden="true" class="fas fa-pause"></i>				</div>
+			</div>
+			
+		</div>
+
+    <!-- Text at center of ground -->
+    <p style="text-align: center; font-size: 50px;">Happy Wedding<br>Brian<br> &hearts;<br> Valencia</p>
+  </div>
+  <div id="ground"></div>
+</div>
+
+<div id="music-container"></div>
+
+
+
+
+
+
+
+
+
+<!-- github corner (https://github.com/tholman/github-corners) -->
+
+  <script  src="./script.js"></script>
+  <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
+  <script>
+    function pauseMusic(){
+
+var audioPlayer = document.getElementById('audio-player');
+var audioContainer = $('#music-container');
+
+audioPlayer.pause();
+audioContainer.addClass("music-player--disabled");
+
+console.log("pause music");
+}
+
+function playMusic(){
+
+var audioPlayer = document.getElementById('audio-player');
+var audioContainer = $('#music-container');
+
+audioPlayer.play();
+audioContainer.removeClass("music-player--disabled");
+
+console.log("play music");
+}
+  </script>
 
 </body>
 </html>
